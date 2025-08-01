@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Банк</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>💳 Виртуальный Банк</h1>
+    <input type="text" id="telegramUsername" placeholder="Введите Telegram ник" />
+    <button onclick="login()">Войти</button>
+
+    <div id="dashboard" class="hidden">
+      <p>👤 Ваш ник: <span id="usernameDisplay"></span></p>
+      <p>💰 Баланс: <span id="balanceDisplay"></span> ₴</p>
+
+      <h3>📤 Перевод</h3>
+      <input type="text" id="recipient" placeholder="Ник получателя" />
+      <input type="number" id="amount" placeholder="Сумма" />
+      <button onclick="sendMoney()">Перевести</button>
+      <p id="transferStatus"></p>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore-compat.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
